@@ -1,50 +1,45 @@
+# HMAE Nov2023 Project: 'LOVE BOX'
 
-# Projet HMAE Nov2023 : 'LOVE BOX'
+## Project Description
 
+The LOVE BOX project is an application that uses an OLED screen and a keyboard to send and receive emojis (smileys) wirelessly using the ESP-NOW library on ESP32 modules.
 
-## Description du Projet
-
-Le projet LOVE BOX est une application utilisant un écran OLED et un clavier pour envoyer et recevoir des emojis (smileys) via la communication sans fil à l'aide de la bibliothèque ESP-NOW sur des modules ESP32.
-
-## Fichiers du Projet
+## Project Files
 
 ### 1. `main.ino`
 
-Le fichier principal du programme Arduino. Il initialise les composants, tels que l'écran OLED, le clavier, et la communication ESP-NOW. Il gère également le cycle principal du programme, y compris la réception et l'envoi d'emojis.
+The main file of the Arduino program. It initializes components such as the OLED screen, the keyboard, and ESP-NOW communication. It also manages the main program cycle, including the reception and sending of emojis.
 
 ### 2. `Bitmaps.h`
 
-Ce fichier d'en-tête contient les déclarations des tableaux d'images représentant différents smileys. Ces déclarations sont utilisées dans le programme principal pour afficher les emojis à l'écran.
+This header file contains declarations of arrays of images representing different smileys. These declarations are used in the main program to display emojis on the screen.
 
 ### 3. `Bitmaps.cpp`
 
-Le fichier source associé à `Bitmaps.h`. Il définit les tableaux d'images des smileys. Ces définitions sont incluses dans le programme principal pour utiliser les images.
+The associated source file for `Bitmaps.h`. It defines arrays of smiley images. These definitions are included in the main program to use the images.
 
 ### 4. `Keypad.h`
 
-Un fichier d'en-tête qui définit une classe pour gérer le clavier matriciel. Cette classe est utilisée dans le programme principal (`main.ino`) pour détecter les touches pressées.
+A header file that defines a class for managing the matrix keyboard. This class is used in the main program (`main.ino`) to detect pressed keys.
 
+## Usage
 
-## Utilisation
+1. Upload the program to an ESP32 module using the Arduino IDE.
+2. Change the MAC address to that of your partner's board.
+3. Use the keyboard to select an emoji and press the 'A' key to send it.
+4. Press the 'B' key to display a received emoji when the screen is on.
+5. You can turn off the screen with the 'T' button (Select).
+6. Even with the screen off, when you receive a message, the screen turns on.
+7. The 'S' button (Start) returns to the menu.
 
-1. Chargez le programme sur un module ESP32 à l'aide de l'IDE Arduino.
-2. Changez la MAC address par celle de la carte de votre binome.
-3. Utilisez le clavier pour sélectionner un emoji et appuyez sur la touche 'A' pour l'envoyer.
-4. Appuyez sur la touche 'B' pour afficher un emoji reçu lorsque l'écran est allumé.
-5. Vous pouvez eteindre l'ecran avec le bouton T (Select).
-6. Meme l'ecran eteind, quand vous recevez un message l'ecran s'allume.
-7. La touche S (Start) retourne au menu.
+## Dependencies
 
+- Adafruit_GFX Library
+- Adafruit_SSD1306 Library
+- Keypad Library
+- esp_now Library
 
-## Dépendances
-
-- Bibliothèque Adafruit_GFX
-- Bibliothèque Adafruit_SSD1306
-- Bibliothèque Keypad
-- Bibliothèque esp_now
-
-## Auteur
+## Authors
 
 Stanislas GADECEAU
 Emma MOLERA
-
